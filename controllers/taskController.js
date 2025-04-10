@@ -79,6 +79,6 @@ exports.deleteTask = (req, res) => {
         return res.status(404).json({ error: 'Task not found' });
     }
 
-    // Respond with a 204 status (No Content) to indicate successful deletion
-    res.status(204).send();
+    // Respond with a success message indicating deletion
+    res.status(200).json({ message: 'Task deleted successfully' });
 };
